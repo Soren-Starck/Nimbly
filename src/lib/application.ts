@@ -26,6 +26,7 @@ export default class Application {
         this.server = server;
         this.settings = {...defaultSettings, ...settings}
         if (isDev()) server.use(DebugEndpoint)
+        // @ts-ignore
         server.notFound(notFound)
         this.loader()
     }
